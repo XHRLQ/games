@@ -18,6 +18,7 @@ public class MergeFile {
                 .setAppName("MergeFile");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
+
         JavaRDD hdfsRDD=sc.textFile(input);
         hdfsRDD.repartition(1).saveAsTextFile(output);
 

@@ -49,12 +49,16 @@ public class Puke extends Game {
         System.out.println("******发牌结果******：");
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= puke.size(); i++) {
-            System.out.print(puke.get(i - 1) + " ");
+            //System.out.print(puke.get(i - 1) + " ");
+            sb.append(puke.get(i - 1)).append(" ");
             if (i % 18 == 0) {
-                System.out.println();
+                //System.out.println();
+                sb.append("\n");
             }
         }
-        System.out.println();
+        //System.out.println();
+        sb.append("\n");
+        System.out.println(sb);
     }
 
 }
